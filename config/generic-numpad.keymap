@@ -51,8 +51,8 @@
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;        // <- ms time for press
-            bindings = <&kp KP_DOT>, <&kp KP_N3>;        // <- define what button at what point of time -> first button first, second button second... -> define using td.. in "default_layer" i.e.
+            tapping-term-ms = <200>;        // <- ms time for press
+            bindings = <&kp comma>, <&kp dot>;        // <- define what button at what point of time -> first button first, second button second... -> define using td.. in "default_layer" i.e.
         };
     };
 
