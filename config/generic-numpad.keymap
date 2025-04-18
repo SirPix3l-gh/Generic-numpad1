@@ -63,7 +63,7 @@
         // default_layer 1. standard layer
         default_layer {
             bindings = <
-    &trans        &trans         &trans            &trans
+    &trans        &trans         &trans            &kp BACKSPACE
     &mo 1         &kp KP_DIVIDE  &kp KP_MULTIPLY   &kp KP_MINUS
     &kp KP_N7     &kp KP_N8      &kp KP_N9         &kp KP_PLUS
     &kp KP_N4     &kp KP_N5      &kp KP_N6
