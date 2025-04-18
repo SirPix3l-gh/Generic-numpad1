@@ -42,7 +42,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;        // <- ms time for press
-            bindings = <&kp KP_DOT>, <&kp COMMA>;        // <- define what button at what point of time -> first button first, second button second... -> define using td.. in "default_layer" i.e.
+            bindings = <&kp KP_DOT>, <&kp KP_COMMA>;        // <- define what button at what point of time -> first button first, second button second... -> define using td.. in "default_layer" i.e.
         };
     };
 
@@ -53,7 +53,7 @@
         // default_layer 1. standard layer
         default_layer {
             bindings = <
-    &trans        &trans         &trans            &trans
+    &trans        &trans         &trans            &kp KP_BACKSPACE
     &mo 1         &kp KP_DIVIDE  &kp KP_MULTIPLY   &kp KP_MINUS
     &kp KP_N7     &kp KP_N8      &kp KP_N9         &kp KP_PLUS
     &kp KP_N4     &kp KP_N5      &kp KP_N6
