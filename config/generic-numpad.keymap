@@ -6,8 +6,18 @@
 
 
 
-// ------------------default-----------------
+
+// -----------------reference----------------
 // |   Crcl   |   HxGn  |   Sqr   |   Trgl  |
+// | LAYERSFT |    /    |    *    |    -    |
+// |    7     |    8    |    9    |    +    |
+// |    4     |    5    |    6    |         |
+// |    1     |    2    |    3    |  ENTER  |
+// |          |    0    |         |    .    |
+
+
+// ------------------default-----------------
+// |   Crcl   |   HxGn  |   Sqr   |   BSPC  |
 // | LAYERSFT |    /    |    *    |    -    |
 // |    7     |    8    |    9    |    +    |
 // |    4     |    5    |    6    |         |
@@ -53,7 +63,7 @@
         // default_layer 1. standard layer
         default_layer {
             bindings = <
-    &trans        &trans         &trans            &kp KP_BACKSPACE
+    &trans        &trans         &trans            &trans
     &mo 1         &kp KP_DIVIDE  &kp KP_MULTIPLY   &kp KP_MINUS
     &kp KP_N7     &kp KP_N8      &kp KP_N9         &kp KP_PLUS
     &kp KP_N4     &kp KP_N5      &kp KP_N6
