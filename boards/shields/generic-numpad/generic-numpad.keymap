@@ -6,7 +6,18 @@
 
 
 
+
+// -----------------reference----------------
+// |   Crcl   |   HxGn  |   Sqr   |   Trgl  |
+// | LAYERSFT |    /    |    *    |    -    |
+// |    7     |    8    |    9    |    +    |
+// |    4     |    5    |    6    |         |
+// |    1     |    2    |    3    |  ENTER  |
+// |          |    0    |         |    .    |
+
+
 // ------------------default-----------------
+// |   Crcl   |   HxGn  |   Sqr   |   BSPC  |
 // | LAYERSFT |    /    |    *    |    -    |
 // |    7     |    8    |    9    |    +    |
 // |    4     |    5    |    6    |         |
@@ -15,6 +26,7 @@
 
 
 // ----------------------------functions-------------------------------
+// |   Crcl     |    HxGn            |    Sqr    |        Trgl        |
 // |  LAYERSFT  |    NOP             |    NOP    |   Bluetooth PREV   |
 // |    NOP     |    LAYERSFT        |    NOP    |   Bluetooth Next   |
 // |    NOP     |    OUT_TOG         |    NOP    |                    |
@@ -23,6 +35,7 @@
 
 
 // --------------------action layer------------------
+// |    Crcl   |    HxGn   |     Sqr   |     Trgl   |
 // |     NOP   |     NOP   |     NOP   |     NOP    |
 // |     NOP   |     NOP   |     NOP   |            |
 // |Arrow Left |     NOP   |Arrow Right|     NOP    |
@@ -33,9 +46,21 @@
 
 
 / {
+    // special behaviors like tap-dance etc.
+    behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;        // <- ms time for press
+            bindings = <&kp comma>, <&kp dot>;        // <- define what button at what point of time -> first button first, second button second... -> define using td.. in "default_layer" i.e.
+        };
+    };
+
+    // keymap buttons
     keymap {
         compatible = "zmk,keymap";
 
+        // default_layer 1. standard layer
         default_layer {
             bindings = <
     &trans        &trans         &trans            &trans
@@ -43,7 +68,7 @@
     &kp KP_N7     &kp KP_N8      &kp KP_N9         &kp KP_PLUS
     &kp KP_N4     &kp KP_N5      &kp KP_N6
     &kp KP_N1     &kp KP_N2      &kp KP_N3         &kp KP_ENTER
-    &kp KP_N0                    &kp KP_DOT 
+    &kp KP_N0                    &td0                               // <- &td0 defined above as dot and comma -> was dot
             >;
         };
         function_layer {
