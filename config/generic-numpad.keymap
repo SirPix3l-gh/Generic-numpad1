@@ -63,11 +63,11 @@
         // default_layer 1. standard layer
         default_layer {
             bindings = <
-    &trans        &trans         &trans            &kp BACKSPACE
-    &mo 1         &kp KP_DIVIDE  &kp KP_MULTIPLY   &kp KP_MINUS
+    &trans        &kp F13        &kp F14           &kp BACKSPACE    // Top Row with function keys
+    &mo 1         &kp KP_DIVIDE  &kp KP_MULTIPLY   &kp KP_MINUS     // "&mo 1" layershift
     &kp KP_N7     &kp KP_N8      &kp KP_N9         &kp KP_PLUS
     &kp KP_N4     &kp KP_N5      &kp KP_N6
-    &kp KP_N1     &kp KP_N2      &kp KP_N3         &kp KP_ENTER
+    &kp KP_N1     &kp KP_N2      &kp KP_N3         &kp KP_ENTER     // &kp "KP_[...]" only Numpad Button
     &kp KP_N0                    &td0                               // <- &td0 defined above as dot and comma -> was dot
             >;
         };
