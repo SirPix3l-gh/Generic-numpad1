@@ -17,16 +17,16 @@
 
 
 // ------------------default-----------------
-// |   Crcl   |   HxGn  |   Sqr   |   BSPC  |
+// |   Crcl   |   F13   |   F14   |   BSPC  |
 // | LAYERSFT |    /    |    *    |    -    |
 // |    7     |    8    |    9    |    +    |
 // |    4     |    5    |    6    |         |
 // |    1     |    2    |    3    |  ENTER  |
-// |          |    0    |         |    .    |
+// |          |    0    |         | td(,.)  | 
 
 
 // ----------------------------functions-------------------------------
-// |   Crcl     |    HxGn            |    Sqr    |        Trgl        |
+// |   Crcl     |    HxGn            |    Sqr    |        DEL         |
 // |  LAYERSFT  |    NOP             |    NOP    |   Bluetooth PREV   |
 // |    NOP     |    LAYERSFT        |    NOP    |   Bluetooth Next   |
 // |    NOP     |    OUT_TOG         |    NOP    |                    |
@@ -51,7 +51,7 @@
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;        // <- ms time for press
+            tapping-term-ms = <100>;        // <- ms time for press
             bindings = <&kp COMMA>, <&kp DOT>;        // <- define what button at what point of time -> first button first, second button second... -> define using td.. in "default_layer" i.e.
         };
     };
