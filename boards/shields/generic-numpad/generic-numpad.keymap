@@ -26,7 +26,7 @@
 
 
 // ----------------------------functions-------------------------------
-// |   Crcl     |    HxGn            |    Sqr    |        Trgl        |
+// |    Num     |    HxGn            |    Sqr    |        Trgl        |
 // |  LAYERSFT  |    NOP             |    NOP    |   Bluetooth PREV   |
 // |    NOP     |    LAYERSFT        |    NOP    |   Bluetooth Next   |
 // |    NOP     |    OUT_TOG         |    NOP    |                    |
@@ -74,7 +74,7 @@
         function_layer {
             bindings = <
     &trans       &trans          &trans       &trans
-    &trans       &trans          &trans       &trans
+    &trans       &kp KP_NUM      &trans       &trans
     &kp DEL      &mo 2           &kp BSPC     &trans
     &trans       &out OUT_TOG    &trans
     &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2 &sys_reset
