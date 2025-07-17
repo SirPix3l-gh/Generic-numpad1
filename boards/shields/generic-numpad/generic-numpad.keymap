@@ -74,8 +74,8 @@
         function_layer {
             bindings = <
     &trans       &trans          &trans       &trans
-    &trans       &kp KP_NUM      &trans       &trans
-    &kp DEL      &mo 2           &kp BSPC     &trans
+    &trans       &trans          &trans       &trans
+    &kp DEL      &mo 2           &trans       &trans
     &trans       &out OUT_TOG    &trans
     &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2 &sys_reset
     &bt BT_CLR                   &trans
