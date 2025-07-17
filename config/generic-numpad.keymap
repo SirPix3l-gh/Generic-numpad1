@@ -28,7 +28,7 @@
 // ----------------------------functions-------------------------------
 // |   Crcl     |    HxGn            |    Sqr    |        DEL         |
 // |  LAYERSFT  |    NOP             |    NOP    |   Bluetooth PREV   |
-// |    NOP     |    LAYERSFT        |    NOP    |   Bluetooth Next   |
+// |    NOP     |    LAYERSFT        |    NUM    |   Bluetooth Next   |
 // |    NOP     |    OUT_TOG         |    NOP    |                    |
 // |Bluetooth 0 |    Bluetooth 1     |Bluetooth 2|   reset            |
 // |            |    BluetoothCLR    |           |   NOP              |
